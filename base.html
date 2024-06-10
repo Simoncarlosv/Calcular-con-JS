@@ -19,9 +19,25 @@
         
               <p>Cantidad:
                 <span class="cantidad">0</span>
-                <button 
+                <button onclick="
+                cantidad=document.querySelector('.cantidad')
+                contador=Number(cantidad.innerHTML)
+                contador=contador+1
+                cantidad.innerHTML=contador
+                precio=document.querySelector('.precio-inicial').innerHTML;
+                total=document.querySelector('.valor-total');
+                total.innerHTML=precio*contador;
+                "
                 >+</button>
-                <button
+                <button onclick="
+                cantidad=document.querySelector('.cantidad')
+                contador=Number(cantidad.innerHTML)
+                contador=contador-1
+                cantidad.innerHTML=contador
+                precio=document.querySelector('.precio-inicial').innerHTML;
+                total=document.querySelector('.valor-total');
+                total.innerHTML=precio*contador;
+                "
                 >-</button>
               </p>
             </div>
@@ -37,5 +53,7 @@
       
 
     </script>
+
+
 </body>
 </html>
